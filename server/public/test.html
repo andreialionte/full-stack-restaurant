@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Food List</title>
+</head>
+<body>
+    <h1>Food List</h1>
+    <ul id="food-list"></ul>
+
+    <script>
+        // Fetch data from your server and display it
+        fetch('/api/foods')
+            .then(response => response.json())
+            .then(data => {
+                const foodList = document.getElementById('food-list');
+                data.forEach(food => {
+                    const listItem = document.createElement('li');
+                    listItem.textContent = `Name: ${food.name}, Description: ${food.description}`;
+                    foodList.appendChild(listItem);
+                });
+            })
+            .catch(error => console.error('Error:', error));
+    </script>
+</body>
+</html>
