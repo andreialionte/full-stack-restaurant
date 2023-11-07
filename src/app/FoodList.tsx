@@ -16,11 +16,11 @@ const FoodList = () => {
     <div id="menu" className="bg-stone-950 h-[100vh]">
       <h1>Food Items</h1>
       <ul>
-        <div className="grid grid-cols-4 gap-5 mr-16 ml-8 mb-[5rem] ">
+        <div className="grid grid-cols-4 gap-5 mr-16 ml-8 mb-[5rem] max-md:grid-cols-1 max-md:mr-10 ">
         {foods.map((food, index) => (
   <li key={food._id} className="shadow-sm bg-stone-900 flex justify-center items-center">  
   <div className="h-[530px] w-[500px] flex flex-col items-center text-center justify-center">
-    <img src={food.photo} alt={food.name} className="h-[20rem] w-[20rem] object-cover mt-[1.2rem]" />
+    <img src={food.photo} alt={food.name} className="h-[20rem] w-[20rem] object-cover mt-[1.2rem] transition-all hover:h-[22rem] hover:w-[22rem] duration-[250ms] " />
     <h2 className="text-white font-extrabold text-2xl ">{food.name}</h2>
     <p className="text-white">{food.ingredients}</p> 
     <div className="mt-auto mb-[3rem] ">
