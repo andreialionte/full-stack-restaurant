@@ -30,7 +30,7 @@ function Hero() {
 
   return (
     <div>
-      <Navbar />
+      <Navbar />      
       <div className="relative">
         <div ref={ref} className="h-[100vh] brightness-[40%] overflow-hidden">
           <motion.div
@@ -38,7 +38,9 @@ function Hero() {
               transform: `translateY(${scrollY / 2}px)`, 
             }}
           >
-            <Image src={herobg} alt="Hero Image" className="max-md:h-[100vh] object-cover"/>
+                
+            <Image src={herobg} alt="Hero Image" className="max-md:h-[100vh] object-cover">
+            </Image>
           </motion.div>
         </div>
         <div className="absolute inset-0 flex items-center justify-center flex-col">
